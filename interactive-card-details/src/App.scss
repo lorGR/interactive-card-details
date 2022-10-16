@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 18px;
+    width: 1440px;
+    height: 900px;
+
+    #root {
+        width: 100%;
+        height: 100%;
+    }
+
+    .App {
+        width: 100%;
+        height: 100%;
+        display: flex;
+
+        .righty {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .form {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                width: 450px;
+                .styled-input {
+                    display: flex;
+                    flex-direction: column;
+                    gap: .5rem;
+                }
+
+                .doubled-styled-input {
+                    display: flex;
+                    gap: 1rem;
+                    .date-input {
+                        display: flex;
+                        flex-direction: column;
+                        gap: .5rem;
+                        flex: 1;
+                        width: 50%;
+
+                        .date-fields {
+                            display: flex;
+                            gap: .5rem;
+                            width: 100%;
+                            input{
+                                width: 50%;
+                            }
+                        }
+                    }
+                    .styled-input {
+                        display: flex;
+                        flex: 1;
+                        width: 50%;
+                    }
+                }
+                input{
+                    border: 1px solid hsl(270, 3%, 87%);
+                    padding: 1rem;
+                    border-radius: 1rem;
+                    font-size: 18px;
+                } ::placeholder {
+                    color:  hsl(279, 6%, 55%);
+                }
+                button {
+                    background-color: hsl(278, 68%, 11%);
+                    padding: 1rem;
+                    color: white;
+                    font-size: 18px;
+                    border-radius: 1rem;
+                }
+            }
+        }
+    }
+}
