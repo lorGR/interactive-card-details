@@ -1,3 +1,5 @@
+import React from "react"
+
 interface StyledInputProps {
     inputType: string,
     inputPlaceHolder: string,
@@ -7,6 +9,11 @@ interface StyledInputProps {
 }
 
 const StyledInput: React.FC<StyledInputProps> = ({ inputType, inputPlaceHolder, labelDetails, inputMaxLength, inputMinLength }) => {
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        console.log(e.target.value);
+    }
+
     return (
         <div className="styled-input">
             <label htmlFor={labelDetails}>{labelDetails.toUpperCase()}</label>
@@ -17,6 +24,7 @@ const StyledInput: React.FC<StyledInputProps> = ({ inputType, inputPlaceHolder, 
                 placeholder={inputPlaceHolder}
                 maxLength={inputMaxLength}
                 minLength={inputMinLength}
+                onChange={handleChange}
             />
         </div>
     )
